@@ -112,3 +112,91 @@ Make sure everything is working by confirming the urls:
 
  - http://localhost:5173
  - http://localhost:5173/about
+
+## Set up Apex Charts
+
+See https://apexcharts.com/docs/vue-charts/ for more information
+
+### Install dependencies
+
+You need to install Apex Charts and the Vue 3 wrapper
+
+`npm install apexcharts vue3-apexcharts`
+
+### Make Apex Charts available everywhere in the app
+
+Change `main.js` to import `VueApexCharts` and have the app use it. Your main.js will look like this
+
+```js
+import './assets/main.css'
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import VueApexCharts from "vue3-apexcharts"; 
+
+const app = createApp(App)
+
+app.use(router)
+app.use(VueApexCharts);
+
+app.mount('#app')
+```
+
+### Create a basic chart
+
+In the component directory, create a new file called `BarChart.vue` and add the following content
+
+```vue
+<script setup>
+import { ref } from 'vue';
+
+const options = ref({
+    chart: {
+        type: 'bar'
+    },
+    xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    }
+});
+
+const series = ref([
+    {
+        name: 'Sales',
+        data: [8000, 8450, 8900, 9350, 9800, 10250, 10700, 11150, 9800, 8450, 7100, 7550]
+    }
+]);
+</script>
+
+<template>
+    <apexchart type="bar" :options="options" :series="series" />
+</template>
+```
+
+### Use the chart component
+
+Modify `views/HomeView.vue` to use the chart component.
+
+```vue
+<script setup>
+import BarChart from '@/components/BarChart.vue';
+</script>
+
+<template>
+  <div>
+    <h1>Home page</h1>
+    <BarChart />
+  </div>
+</template>
+```
+
+### View results
+
+You should see a bar graph when you visit the home page.
+
+![Simple Bar Graph](/images/simple-bar-graph.png?raw=true "Simple Bar Graph")
+
+# Resources
+
+ - https://vuejs.org/guide/quick-start.html
+ - https://apexcharts.com/docs/vue-charts/
