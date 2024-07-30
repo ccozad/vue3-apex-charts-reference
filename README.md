@@ -5,7 +5,6 @@ This repo is a focused example of how to use
  - Vue.js 3 (A reactive front end framework)
  - Apex Charts (A feature rich charting library)
  - Bootstrap (A light weight, grid based UI system)
- - Bootstrap Icons (A SVG based icon library)
 
  This document will go over how to install each piece individually (for inclusion in existing projects) and how to run the full project locally. Each page in the app has an example of how to show a given chart along with additional references.
 
