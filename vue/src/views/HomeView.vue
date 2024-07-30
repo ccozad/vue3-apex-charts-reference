@@ -5,6 +5,15 @@ import BarChart from '@/components/BarChart.vue';
 <template>
   <div>
     <h1>Home page</h1>
-    <BarChart />
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="col-9">
+                <BarChart />
+            </div>
+            <div class="col-3">
+                This is an example of a bar chart
+            </div>
+        </div>
+    </div>
   </div>
 </template>

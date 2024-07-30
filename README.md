@@ -21,7 +21,7 @@ This repo is a focused example of how to use
 
 ## Set up the Vue.js project
 
-### Install Dependencies
+### Install dependencies
 
 See the Vue.js quick start documentation for how to setup a project. https://vuejs.org/guide/quick-start.html
 
@@ -196,7 +196,57 @@ You should see a bar graph when you visit the home page.
 
 ![Simple Bar Graph](/images/simple-bar-graph.png?raw=true "Simple Bar Graph")
 
+## Set up Bootstrap 5
+
+### Install dependencies
+
+You need to install bootstrap and popperjs core
+
+`npm install bootstrap @popperjs/core`
+
+### Modify main.js
+
+```js
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
+```
+
+### Add some Bootstrap markup
+
+Change `views/HomeView.vue` to use a simple Bootstrap container with rows an columns.
+
+```vue
+<script setup>
+import BarChart from '@/components/BarChart.vue';
+</script>
+
+<template>
+  <div>
+    <h1>Home page</h1>
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="col-9">
+                <BarChart />
+            </div>
+            <div class="col-3">
+                This is an example of a bar chart
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+```
+
+![Bootstrap Bar Graph](/images/bargraph-bootstrap.png?raw=true "Bootstrap Bar Graph")
+
+# Where to go next
+
+After you have a Vue project with Apex Charts and Bootstrap configured you can create any number of complex, data driven pages. See the various Views and Components in this project for inspiration and examples.
+
+If you are looking for something and can't find it please file an issue for inclusion in a future update. Please give the repo a star if it helped you on your projects.
+
 # Resources
 
  - https://vuejs.org/guide/quick-start.html
  - https://apexcharts.com/docs/vue-charts/
+ - https://getbootstrap.com
