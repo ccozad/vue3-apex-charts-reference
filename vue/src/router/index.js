@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '@/views/AboutView.vue'
+import AreaChartExample from '@/views/AreaChartExample.vue'
 import BarChartExample from '@/views/BarChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
@@ -38,6 +39,14 @@ const router = createRouter({
         name: 'simplelinechart',
         components: {
           default: LineChartExample,
+          header: Header
+        } 
+    },
+    {
+        path: '/simple/area-chart',
+        name: 'simpleareachart',
+        components: {
+          default: AreaChartExample,
           header: Header
         } 
     }
