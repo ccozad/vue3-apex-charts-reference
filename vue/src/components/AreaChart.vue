@@ -29,5 +29,5 @@ const series = ref([
 </script>
 
 <template>
-    <apexchart type="area" :options="options" :series="series" />
+    <apexchart :options="options" :series="series" />
 </template>
