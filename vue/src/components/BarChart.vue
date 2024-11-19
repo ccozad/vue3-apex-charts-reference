@@ -3,7 +3,10 @@ import { ref } from 'vue';
 
 const options = ref({
     chart: {
-        type: 'bar'
+        type: 'bar',
+        toolbar: {
+            show: false,
+        }
     },
     xaxis: {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']

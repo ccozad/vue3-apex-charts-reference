@@ -3,7 +3,10 @@ import { ref } from 'vue';
 
 const options = ref({
     chart: {
-        type: 'area'
+        type: 'area',
+        toolbar: {
+            show: false,
+        }
     },
     xaxis: {
         categories: ['10/17', '10/18', '10/21', '10/22', '10/23', '10/24', '10/25']

@@ -3,7 +3,10 @@ import { ref } from 'vue';
 
 const options = ref({
     chart: {
-        type: 'line'
+        type: 'line',
+        toolbar: {
+            show: false,
+        }
     },
     stroke: {
         curve: 'smooth',
