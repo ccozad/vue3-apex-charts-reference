@@ -17,6 +17,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/simple/area-chart">Area Chart</a></li>
               <li><a class="dropdown-item" href="/simple/bar-chart">Bar Chart</a></li>
+              <li><a class="dropdown-item" href="/simple/box-chart">Box Chart</a></li>
               <li><a class="dropdown-item" href="/simple/column-chart">Column Chart</a></li>
               <li><a class="dropdown-item" href="/simple/line-chart">Line Chart</a></li>
             </ul>

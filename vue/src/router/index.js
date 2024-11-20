@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '@/views/AboutView.vue'
 import AreaChartExample from '@/views/AreaChartExample.vue'
 import BarChartExample from '@/views/BarChartExample.vue'
+import BoxChartExample from '@/views/BoxChartExample.vue'
 import ColumnChartExample from '@/views/ColumnChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
@@ -56,6 +57,14 @@ const router = createRouter({
         name: 'simplecolumnchart',
         components: {
           default: ColumnChartExample,
+          header: Header
+        } 
+    },
+    {
+        path: '/simple/box-chart',
+        name: 'simpleboxchart',
+        components: {
+          default: BoxChartExample,
           header: Header
         } 
     }
