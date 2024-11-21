@@ -4,6 +4,7 @@ import AreaChartExample from '@/views/AreaChartExample.vue'
 import BarChartExample from '@/views/BarChartExample.vue'
 import BoxChartExample from '@/views/BoxChartExample.vue'
 import ColumnChartExample from '@/views/ColumnChartExample.vue'
+import DonutChartExample from '@/views/DonutChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
 import Header from '@/components/Header.vue'
@@ -65,6 +66,14 @@ const router = createRouter({
         name: 'simpleboxchart',
         components: {
           default: BoxChartExample,
+          header: Header
+        } 
+    },
+    {
+        path: '/simple/donut-chart',
+        name: 'simpledonutchart',
+        components: {
+          default: DonutChartExample,
           header: Header
         } 
     }
