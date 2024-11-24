@@ -107,6 +107,8 @@ export default router
 
 ### Try it
 
+Run `npm run dev`
+
 Make sure everything is working by confirming the urls:
 
  - http://localhost:5173
