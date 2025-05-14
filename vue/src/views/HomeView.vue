@@ -31,6 +31,11 @@ const charts = [
         title: 'Line Chart',
         image: './line-chart.png',
         link: '/simple/line-chart'
+    },
+    {
+        title: 'Treemap Chart',
+        image: '',
+        link: '/simple/treemap-chart'
     }
 ];
 </script>

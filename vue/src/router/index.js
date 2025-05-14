@@ -8,6 +8,7 @@ import DonutChartExample from '@/views/DonutChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
 import Header from '@/components/Header.vue'
+import TreemapChartExample from '@/views/TreemapChartExample.vue'
 
 
 const router = createRouter({
@@ -76,7 +77,15 @@ const router = createRouter({
           default: DonutChartExample,
           header: Header
         } 
-    }
+    },
+    {
+      path: '/simple/treemap-chart',
+      name: 'simpletreemapchart',
+      components: {
+        default: TreemapChartExample,
+        header: Header
+      } 
+  }
   ]
 })
 
