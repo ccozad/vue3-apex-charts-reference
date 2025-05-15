@@ -28,10 +28,10 @@ import TreemapChart from '@/components/TreemapChart.vue';
                         </ul>
                     </li>
                     <li>
-                        <a href="https://github.com/ccozad/vue3-apex-charts-reference/blob/main/vue/src/components/ColumnChart.vue" target="_blank">Source Code</a>
+                        <a href="https://github.com/ccozad/vue3-apex-charts-reference/blob/main/vue/src/components/TreemapChart.vue" target="_blank">Source Code</a>
                     </li>
                     <li>
-                        <a href="https://apexcharts.com/docs/chart-types/column-chart" target="_blank">Column Chart Documentation</a>
+                        <a href="https://apexcharts.com/docs/chart-types/treemap-chart/" target="_blank">Treemap Chart</a>
                     </li>
                 </ul>
             </div>

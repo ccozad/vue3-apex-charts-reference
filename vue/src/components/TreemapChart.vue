@@ -7,7 +7,7 @@ const options = ref({
         type: "treemap",
     },
     title: {
-        text: 'Population'
+        text: 'Resident Population of the US in 2024 (in millions)'
     }
 });
 
@@ -15,33 +15,89 @@ const series = ref([
     {
         data: [
           {
-            x: "New Delhi",
-            y: 218,
+            x: "California",
+            y: 39.43,
           },
           {
-            x: "Kolkata",
-            y: 149,
+            x: "Texas",
+            y: 31.29,
           },
           {
-            x: "Mumbai",
-            y: 184,
+            x: "Florida",
+            y: 23.37,
           },
           {
-            x: "Ahmedabad",
-            y: 55,
+            x: "New York",
+            y: 19.87,
           },
           {
-            x: "Bangaluru",
-            y: 84,
+            x: "Pennslyvania",
+            y: 13.08,
           },
           {
-            x: "Pune",
-            y: 31,
+            x: "Illinois",
+            y: 12.71,
           },
           {
-            x: "Chennai",
-            y: 70,
-          }
+            x: "Ohio",
+            y: 11.88,
+          },
+          {
+            x: "Georgia",
+            y: 11.18,
+          },
+          {
+            x: "North Carolina",
+            y: 11.05,
+          },
+          {
+            x: "Michigan",
+            y: 10.14,
+          },
+          {
+            x: "New Jersey",
+            y: 9.5,
+          },
+          {
+            x: "Virginia",
+            y: 8.81,
+          },
+          {
+            x: "Washington",
+            y: 7.96,
+          },
+          {
+            x: "Arizona",
+            y: 7.58,
+          },
+          {
+            x: "Tennessee",
+            y: 7.23,
+          },
+          {
+            x: "Massachusetts",
+            y: 7.14,
+          },
+          {
+            x: "Indiana",
+            y: 6.92,
+          },
+          {
+            x: "Maryland",
+            y: 6.26,
+          },
+          {
+            x: "Missouri",
+            y: 6.25,
+          },
+          {
+            x: "Colorado",
+            y: 5.96,
+          },
+          {
+            x: "Wisconsin",
+            y: 5.96,
+          },
         ],
     },
 ]);
