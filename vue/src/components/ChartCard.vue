@@ -5,10 +5,10 @@ const props = defineProps(['title', 'link', 'image']);
 <template>
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">{{ props.title }}</h5>
+            <h5 class="card-title"><a :href="`${props.link}`" class="text-dark text-decoration-none">{{ props.title }}</a></h5>
         </div>
         <div class="card-body">
-            <img :src="props.image" class="card-img-top" alt="...">
+            <a :href="`${props.link}`"><img :src="props.image" class="card-img-top" alt="..."></a>
         </div>
        
     </div>

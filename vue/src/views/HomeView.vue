@@ -34,7 +34,7 @@ const charts = [
     },
     {
         title: 'Treemap Chart',
-        image: '',
+        image: './treemap-chart.png',
         link: '/simple/treemap-chart'
     }
 ];
