@@ -5,7 +5,7 @@ import BoxChart from '@/components/BoxChart.vue';
 <template>
   <div>
     <h1 class="p-3">Box Chart</h1>
-    <div class="container-fluid">
+    <div class="container-fluid p-2">
         <div class="row">
             <div class="col-8">
                 <BoxChart />
@@ -19,7 +19,7 @@ import BoxChart from '@/components/BoxChart.vue';
                         <a href="https://github.com/ccozad/vue3-apex-charts-reference/blob/main/vue/src/components/BoxChart.vue" target="_blank">Vue 3 Source Code</a>
                     </li>
                     <li>
-                        <a href="https://apexcharts.com/docs/chart-types/box-chart/" target="_blank">Box Chart Documentation</a>
+                        <a href="https://apexcharts.com/docs/chart-types/boxplot/" target="_blank">Box Chart Documentation</a>
                     </li>
                 </ul>
             </div>
