@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import KitchenSinkAreaChartExample from '@/views/KitchenSinkAreaChartExample.vue'
 import AboutView from '@/views/AboutView.vue'
 import AreaChartExample from '@/views/AreaChartExample.vue'
 import BarChartExample from '@/views/BarChartExample.vue'
@@ -84,8 +85,16 @@ const router = createRouter({
       components: {
         default: TreemapChartExample,
         header: Header
-      } 
-  }
+      }
+    },
+    {
+      path: '/complex/area-chart',
+      name: 'complexareachart',
+      components: {
+        default: KitchenSinkAreaChartExample,
+        header: Header
+      }
+    }
   ]
 })
 
