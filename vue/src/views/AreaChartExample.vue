@@ -22,7 +22,7 @@ import AreaChart from '@/components/AreaChart.vue'
             <li>
               Related charts:
               <ul>
-                <li><a href="/simple/line-chart">Line Chart</a></li>
+                <li><RouterLink to="/simple/line-chart">Line Chart</RouterLink></li>
               </ul>
             </li>
             <li>

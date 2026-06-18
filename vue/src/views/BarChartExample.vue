@@ -23,7 +23,7 @@ import BarChart from '@/components/BarChart.vue'
             <li>
               Related charts:
               <ul>
-                <li><a href="/simple/column-chart">Column Chart</a></li>
+                <li><RouterLink to="/simple/column-chart">Column Chart</RouterLink></li>
               </ul>
             </li>
             <li>

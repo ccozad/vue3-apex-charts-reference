@@ -24,7 +24,7 @@ import LineChart from '@/components/LineChart.vue'
             <li>
               Related charts:
               <ul>
-                <li><a href="/simple/area-chart">Area Chart</a></li>
+                <li><RouterLink to="/simple/area-chart">Area Chart</RouterLink></li>
               </ul>
             </li>
             <li>
