@@ -1,256 +1,67 @@
-# Introduction
+# Vue 3 + Apex Charts Reference
 
 ![Apex Charts Vue 3 Demo](/images/apex-chart-demo.png?raw=true "Apex Charts Vue 3 Demo")
 
 **Live demo: https://ccozad.github.io/vue3-apex-charts-reference/**
 
-This repo is a focused example of how to use
+A focused, copy-pasteable reference for building data-driven charts with
+[Vue 3](https://vuejs.org/), [Apex Charts](https://apexcharts.com/) (via
+`vue3-apexcharts`), and [Bootstrap 5](https://getbootstrap.com/). Each page is a
+self-contained example of one chart type, written as a small Vue component you
+can lift straight into your own project. The app is TypeScript, built with Vite,
+and deployed to GitHub Pages.
 
- - Vue.js 3 (A reactive front end framework)
- - Apex Charts (A feature rich charting library)
- - Bootstrap (A light weight, grid based UI system)
+## What's in this demo
 
- This document will go over how to install each piece individually (for inclusion in existing projects) and how to run the full project locally. Each page in the app has an example of how to show a given chart along with additional references.
+Each example is a view (the page) backed by a chart component (the reusable
+chart). Click a chart to see it live, or open the source to copy it.
 
-# Run the finished project locally
+| Chart | Source | What it shows |
+| --- | --- | --- |
+| [Area](https://ccozad.github.io/vue3-apex-charts-reference/simple/area-chart) | [AreaChartExample.vue](vue/src/views/AreaChartExample.vue) | Stock high/low values over a date range |
+| [Bar](https://ccozad.github.io/vue3-apex-charts-reference/simple/bar-chart) | [BarChartExample.vue](vue/src/views/BarChartExample.vue) | A single series of monthly sales |
+| [Box](https://ccozad.github.io/vue3-apex-charts-reference/simple/box-chart) | [BoxChartExample.vue](vue/src/views/BoxChartExample.vue) | Horizontal box plot of a distribution |
+| [Column](https://ccozad.github.io/vue3-apex-charts-reference/simple/column-chart) | [ColumnChartExample.vue](vue/src/views/ColumnChartExample.vue) | Stacked columns of monthly spending |
+| [Donut](https://ccozad.github.io/vue3-apex-charts-reference/simple/donut-chart) | [DonutChartExample.vue](vue/src/views/DonutChartExample.vue) | Proportions of a whole (non-axis series) |
+| [Line](https://ccozad.github.io/vue3-apex-charts-reference/simple/line-chart) | [LineChartExample.vue](vue/src/views/LineChartExample.vue) | Two smoothed series with custom colors |
+| [Treemap](https://ccozad.github.io/vue3-apex-charts-reference/simple/treemap-chart) | [TreemapChartExample.vue](vue/src/views/TreemapChartExample.vue) | Hierarchical data sized by value |
+| [Complex Area](https://ccozad.github.io/vue3-apex-charts-reference/complex/area-chart) | [KitchenSinkAreaChartExample.vue](vue/src/views/KitchenSinkAreaChartExample.vue) | An area chart with a live toolbar toggle |
 
- - Clone the code
- - Change to the `vue` directory
- - Run `npm install`
- - Run `npm run dev`
- - Open a browser and navigate to the address given by the `npm run dev` command
+The chart components themselves live in [`vue/src/components/`](vue/src/components).
 
-# Create the project from scratch
+## Run it locally
 
-## Set up the Vue.js project
-
-### Install dependencies
-
-See the Vue.js quick start documentation for how to setup a project. https://vuejs.org/guide/quick-start.html
-
-In short:
-`npm create vue@latest`
-
-For this project we picked
- - Project name: `vue `
- - Typescript? No
- - JSX Support? Yes
- - Vue Router for Single page Application development? Yes
- - Pinia? No
- - Vitest? Yes
- - End-to-end testing solution? No
- - EsLint? Yes
- - Prettier? Yes
- - Vue DevTools? No
-
-`npm install`
- 
-### Clear out default content
-
- - Remove all of the files in the `components` directory.
- - Remove all styles from `App.vue`, files in the `views` views directory and CSS styles in the assets directory.
-
- - Replace the `App.vue` contents with
-
-```vue
-<script setup>
-import { RouterView } from 'vue-router'
-</script>
-
-<template>
-  <RouterView />
-</template>
+```sh
+git clone https://github.com/ccozad/vue3-apex-charts-reference.git
+cd vue3-apex-charts-reference/vue
+npm install
+npm run dev
 ```
 
- - Replace `views/HomeView.vue` contents with
+Then open the URL printed by `npm run dev` (defaults to http://localhost:5173).
 
-```vue
-<template>
-  <div>
-    <h1>Home page</h1>
-  </div>
-</template>
-```
+Other scripts (run from the `vue` directory):
 
- - Replace `views/AboutView.vue` contents with
+| Script | Purpose |
+| --- | --- |
+| `npm run build` | Type-check and build for production |
+| `npm run test:unit` | Run unit tests (Vitest) |
+| `npm run lint` | Lint and auto-fix |
+| `npm run format` | Format with Prettier |
 
-```vue
-<template>
-  <div>
-    <h1>About page</h1>
-  </div>
-</template>
-```
- - Replace the `router/index.js` contents with
+## Adding these to your own project
 
- ```js
- import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+Want to set up Vue 3 + Apex Charts + Bootstrap from an empty project? See
+**[TUTORIAL.md](TUTORIAL.md)** for the step-by-step, install-each-piece
+walkthrough.
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+## Where to go next
 
-export default router
-```
+Browse the [inventory above](#whats-in-this-demo) for a chart to start from. If
+something you need is missing, please file an issue. And if this helped, a star
+is appreciated!
 
-### Try it
-
-Run `npm run dev`
-
-Make sure everything is working by confirming the urls:
-
- - http://localhost:5173
- - http://localhost:5173/about
-
-## Set up Apex Charts
-
-See https://apexcharts.com/docs/vue-charts/ for more information
-
-### Install dependencies
-
-You need to install Apex Charts and the Vue 3 wrapper
-
-`npm install apexcharts vue3-apexcharts`
-
-### Make Apex Charts available everywhere in the app
-
-Change `main.js` to import `VueApexCharts` and have the app use it. Your main.js will look like this
-
-```js
-import './assets/main.css'
-
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import VueApexCharts from "vue3-apexcharts"; 
-
-const app = createApp(App)
-
-app.use(router)
-app.use(VueApexCharts);
-
-app.mount('#app')
-```
-
-### Create a basic chart
-
-In the component directory, create a new file called `BarChart.vue` and add the following content
-
-```vue
-<script setup>
-import { ref } from 'vue';
-
-const options = ref({
-    chart: {
-        type: 'bar'
-    },
-    xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    }
-});
-
-const series = ref([
-    {
-        name: 'Sales',
-        data: [8000, 8450, 8900, 9350, 9800, 10250, 10700, 11150, 9800, 8450, 7100, 7550]
-    }
-]);
-</script>
-
-<template>
-    <apexchart type="bar" :options="options" :series="series" />
-</template>
-```
-
-### Use the chart component
-
-Modify `views/HomeView.vue` to use the chart component.
-
-```vue
-<script setup>
-import BarChart from '@/components/BarChart.vue';
-</script>
-
-<template>
-  <div>
-    <h1>Home page</h1>
-    <BarChart />
-  </div>
-</template>
-```
-
-### View results
-
-You should see a bar graph when you visit the home page.
-
-![Simple Bar Graph](/images/simple-bar-graph.png?raw=true "Simple Bar Graph")
-
-## Set up Bootstrap 5
-
-### Install dependencies
-
-You need to install bootstrap and popperjs core
-
-`npm install bootstrap @popperjs/core`
-
-### Modify main.js
-
-```js
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap"
-```
-
-### Add some Bootstrap markup
-
-Change `views/HomeView.vue` to use a simple Bootstrap container with rows an columns.
-
-```vue
-<script setup>
-import BarChart from '@/components/BarChart.vue';
-</script>
-
-<template>
-  <div>
-    <h1>Home page</h1>
-    <div class="container-fluid p-2">
-        <div class="row">
-            <div class="col-9">
-                <BarChart />
-            </div>
-            <div class="col-3">
-                This is an example of a bar chart
-            </div>
-        </div>
-    </div>
-  </div>
-</template>
-```
-
-![Bootstrap Bar Graph](/images/bargraph-bootstrap.png?raw=true "Bootstrap Bar Graph")
-
-# Where to go next
-
-After you have a Vue project with Apex Charts and Bootstrap configured you can create any number of complex, data driven pages. See the various Views and Components in this project for inspiration and examples.
-
-If you are looking for something and can't find it please file an issue for inclusion in a future update. Please give the repo a star if it helped you on your projects.
-
-# Resources
+## Resources
 
  - https://vuejs.org/guide/quick-start.html
  - https://apexcharts.com/docs/vue-charts/
