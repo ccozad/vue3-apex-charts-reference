@@ -1,7 +1,36 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+import { onBeforeUnmount, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
+
+// Visually close any open navbar dropdown.
+function closeOpenDropdowns() {
+  document.querySelectorAll('.navbar .dropdown-menu.show').forEach((menu) => {
+    menu.classList.remove('show')
+    const toggle = menu.parentElement?.querySelector('.dropdown-toggle')
+    toggle?.classList.remove('show')
+    toggle?.setAttribute('aria-expanded', 'false')
+  })
+}
+
+// Bootstrap closes dropdowns via a bubbling document-click listener, but the
+// ApexCharts SVG calls stopPropagation, so clicks on a chart never reach it and
+// the menu stays open. Listen in the capture phase so an outside click always
+// closes the menu, regardless of what swallows the event later.
+function handleOutsideClick(event: MouseEvent) {
+  const target = event.target as Element | null
+  if (!target?.closest('.navbar .dropdown')) {
+    closeOpenDropdowns()
+  }
+}
+
+onMounted(() => document.addEventListener('click', handleOutsideClick, true))
+onBeforeUnmount(() => document.removeEventListener('click', handleOutsideClick, true))
+
+// SPA navigation doesn't reload, so close the menu after picking an item.
+router.afterEach(() => closeOpenDropdowns())
 </script>
 
 <template>
