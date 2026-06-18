@@ -35,6 +35,21 @@
               <li><a class="dropdown-item" href="/simple/column-chart">Column Chart</a></li>
               <li><a class="dropdown-item" href="/simple/donut-chart">Donut Chart</a></li>
               <li><a class="dropdown-item" href="/simple/line-chart">Line Chart</a></li>
+              <li><a class="dropdown-item" href="/simple/treemap-chart">Treemap Chart</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Complex Examples
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/complex/area-chart">Area Chart</a></li>
             </ul>
           </li>
           <li class="nav-item">

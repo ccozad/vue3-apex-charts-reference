@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import KitchenSinkAreaChartExample from '@/views/KitchenSinkAreaChartExample.vue'
 import AboutView from '@/views/AboutView.vue'
 import AreaChartExample from '@/views/AreaChartExample.vue'
 import BarChartExample from '@/views/BarChartExample.vue'
@@ -6,6 +7,7 @@ import BoxChartExample from '@/views/BoxChartExample.vue'
 import ColumnChartExample from '@/views/ColumnChartExample.vue'
 import DonutChartExample from '@/views/DonutChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
+import TreemapChartExample from '@/views/TreemapChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
 import AppHeader from '@/components/AppHeader.vue'
 
@@ -73,6 +75,22 @@ const router = createRouter({
       name: 'simpledonutchart',
       components: {
         default: DonutChartExample,
+        header: AppHeader
+      }
+    },
+    {
+      path: '/simple/treemap-chart',
+      name: 'simpletreemapchart',
+      components: {
+        default: TreemapChartExample,
+        header: AppHeader
+      }
+    },
+    {
+      path: '/complex/area-chart',
+      name: 'complexareachart',
+      components: {
+        default: KitchenSinkAreaChartExample,
         header: AppHeader
       }
     }
