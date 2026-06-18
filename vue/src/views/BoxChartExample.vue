@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import BoxChart from '@/components/BoxChart.vue'
 </script>
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TreemapChart from '@/components/TreemapChart.vue'
 </script>
 

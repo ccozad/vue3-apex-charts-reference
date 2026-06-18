@@ -1,7 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import type { ApexOptions } from 'apexcharts'
 
-const options = ref({
+const options = ref<ApexOptions>({
   chart: {
     type: 'bar',
     stacked: true,
@@ -17,7 +18,7 @@ const options = ref({
   }
 })
 
-const series = ref([
+const series = ref<ApexAxisChartSeries>([
   {
     name: 'Housing',
     data: [750, 750, 800, 800, 800, 800, 800, 800, 900, 900, 900, 900]
