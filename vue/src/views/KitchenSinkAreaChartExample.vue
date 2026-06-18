@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AreaChart from '@/components/AreaChart.vue'
+import ComplexAreaChart from '@/components/ComplexAreaChart.vue'
 import { ref } from 'vue'
 
 const showToolbar = ref(false)
@@ -7,11 +7,11 @@ const showToolbar = ref(false)
 
 <template>
   <div>
-    <h1 class="p-3">Area Chart</h1>
+    <h1 class="p-3">Complex Area Chart</h1>
     <div class="container-fluid p-2">
       <div class="row">
         <div class="col-8">
-          <AreaChart :showToolbar="showToolbar" />
+          <ComplexAreaChart :showToolbar="showToolbar" />
         </div>
         <div class="col-4">
           <form>
