@@ -7,8 +7,7 @@ import ColumnChartExample from '@/views/ColumnChartExample.vue'
 import DonutChartExample from '@/views/DonutChartExample.vue'
 import LineChartExample from '@/views/LineChartExample.vue'
 import HomeView from '@/views/HomeView.vue'
-import Header from '@/components/Header.vue'
-
+import AppHeader from '@/components/AppHeader.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,64 +17,64 @@ const router = createRouter({
       name: 'home',
       components: {
         default: HomeView,
-        header: Header
-      } 
+        header: AppHeader
+      }
     },
     {
       path: '/about',
       name: 'about',
       components: {
         default: AboutView,
-        header: Header
-      } 
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/bar-chart',
-        name: 'simplebarchart',
-        components: {
-          default: BarChartExample,
-          header: Header
-        } 
+      path: '/simple/bar-chart',
+      name: 'simplebarchart',
+      components: {
+        default: BarChartExample,
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/line-chart',
-        name: 'simplelinechart',
-        components: {
-          default: LineChartExample,
-          header: Header
-        } 
+      path: '/simple/line-chart',
+      name: 'simplelinechart',
+      components: {
+        default: LineChartExample,
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/area-chart',
-        name: 'simpleareachart',
-        components: {
-          default: AreaChartExample,
-          header: Header
-        } 
+      path: '/simple/area-chart',
+      name: 'simpleareachart',
+      components: {
+        default: AreaChartExample,
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/column-chart',
-        name: 'simplecolumnchart',
-        components: {
-          default: ColumnChartExample,
-          header: Header
-        } 
+      path: '/simple/column-chart',
+      name: 'simplecolumnchart',
+      components: {
+        default: ColumnChartExample,
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/box-chart',
-        name: 'simpleboxchart',
-        components: {
-          default: BoxChartExample,
-          header: Header
-        } 
+      path: '/simple/box-chart',
+      name: 'simpleboxchart',
+      components: {
+        default: BoxChartExample,
+        header: AppHeader
+      }
     },
     {
-        path: '/simple/donut-chart',
-        name: 'simpledonutchart',
-        components: {
-          default: DonutChartExample,
-          header: Header
-        } 
+      path: '/simple/donut-chart',
+      name: 'simpledonutchart',
+      components: {
+        default: DonutChartExample,
+        header: AppHeader
+      }
     }
   ]
 })
