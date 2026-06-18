@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ApexOptions } from 'apexcharts'
+import type { ApexAxisChartSeries, ApexOptions } from 'apexcharts'
 
 const options = ref<ApexOptions>({
   chart: {
@@ -13,7 +13,10 @@ const options = ref<ApexOptions>({
       fontSize: '12px'
     },
     formatter: function (text, op) {
-      return [text, op.value]
+      // v5's ApexFormatterOpts type omits `value`, but ApexCharts still passes
+      // the cell value at runtime for treemap data labels.
+      const value = (op as { value?: number } | undefined)?.value ?? 0
+      return [String(text), value]
     },
     offsetY: -4
   },
