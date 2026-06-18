@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import type { ApexOptions } from 'apexcharts'
 
 const props = defineProps<{ showToolbar?: boolean }>()
 
-const options = ref<ApexOptions>({
+// Computed so toggling showToolbar reactively updates the chart toolbar.
+const options = computed<ApexOptions>(() => ({
   chart: {
     type: 'area',
     toolbar: {
@@ -20,7 +21,7 @@ const options = ref<ApexOptions>({
   title: {
     text: 'TSLA Stock Price'
   }
-})
+}))
 
 const series = ref<ApexAxisChartSeries>([
   {
