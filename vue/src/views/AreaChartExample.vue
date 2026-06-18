@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import AreaChart from '@/components/AreaChart.vue'
 </script>
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import DonutChart from '@/components/DonutChart.vue'
 </script>
 

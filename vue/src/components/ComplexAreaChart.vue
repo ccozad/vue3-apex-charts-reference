@@ -1,13 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import type { ApexOptions } from 'apexcharts'
 
-const props = defineProps(['showToolbar'])
+const props = defineProps<{ showToolbar?: boolean }>()
 
-const options = ref({
+const options = ref<ApexOptions>({
   chart: {
     type: 'area',
     toolbar: {
-      show: props
+      show: props.showToolbar
     }
   },
   xaxis: {
@@ -21,7 +22,7 @@ const options = ref({
   }
 })
 
-const series = ref([
+const series = ref<ApexAxisChartSeries>([
   {
     name: 'High',
     data: [222.08, 222.28, 220.48, 218.22, 218.72, 262.1199, 269.49]

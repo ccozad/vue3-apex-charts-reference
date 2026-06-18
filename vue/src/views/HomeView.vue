@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ChartCard from '@/components/ChartCard.vue'
 
 const charts = [

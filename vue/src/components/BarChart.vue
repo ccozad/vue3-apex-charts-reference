@@ -1,7 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import type { ApexOptions } from 'apexcharts'
 
-const options = ref({
+const options = ref<ApexOptions>({
   chart: {
     type: 'bar',
     toolbar: {
@@ -16,7 +17,7 @@ const options = ref({
   }
 })
 
-const series = ref([
+const series = ref<ApexAxisChartSeries>([
   {
     name: 'Sales',
     data: [8000, 8450, 8900, 9350, 9800, 10250, 10700, 11150, 9800, 8450, 7100, 7550]

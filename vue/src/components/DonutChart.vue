@@ -1,7 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
+import type { ApexOptions } from 'apexcharts'
 
-const options = ref({
+const options = ref<ApexOptions>({
   chart: {
     type: 'donut',
     toolbar: {
@@ -22,7 +23,7 @@ const options = ref({
   labels: ['Apple', 'Mango', 'Orange', 'Watermelon', 'Banana']
 })
 
-const series = ref([44, 55, 41, 17, 15])
+const series = ref<ApexNonAxisChartSeries>([44, 55, 41, 17, 15])
 </script>
 
 <template>
