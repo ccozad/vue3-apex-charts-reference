@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import type { ApexOptions } from 'apexcharts'
+import type { ApexAxisChartSeries, ApexOptions } from 'apexcharts'
 
 const props = defineProps<{ showToolbar?: boolean }>()
 
