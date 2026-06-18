@@ -2,6 +2,8 @@
 
 ![Apex Charts Vue 3 Demo](/images/apex-chart-demo.png?raw=true "Apex Charts Vue 3 Demo")
 
+**Live demo: https://ccozad.github.io/vue3-apex-charts-reference/**
+
 This repo is a focused example of how to use
 
  - Vue.js 3 (A reactive front end framework)
