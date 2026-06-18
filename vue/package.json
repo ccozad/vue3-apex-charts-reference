@@ -10,7 +10,9 @@
     "test:unit": "vitest --passWithNoTests",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "lint:check": "eslint .",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
